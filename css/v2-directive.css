@@ -1,0 +1,31 @@
+@charset "utf-8";
+div{
+    border:1px dashed silver;
+    padding:20px;
+    margin:20px 0;
+}
+
+p{
+    background:#eee;
+    padding:10px;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+th, td{
+    border:1px solid silver;
+    padding:10px 20px;
+    text-align:center;
+}
+
+th{
+    background:#333;
+    color:#fff;
+    font-weight:normal;
+}
+
+tbody tr:nth-child(even){
+    background:#eee;
+}
