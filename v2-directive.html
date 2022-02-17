@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue2 Directive</title>
+</head>
+<body>
+    <h1>Vue2 Directive</h1>
+    <section>
+        <h2>v-text vs v-html</h2>
+        <div id="vm1">
+            <p>Mustache : {{msg1}}</p>
+            <p>v-text : <span v-text="msg1"></span></p>
+            <p>v-html : <span v-html="msg1"></span></p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/v2-directive.js"></script>
+</body>
+</html>
