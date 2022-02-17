@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue2 Options</title>
+    <style>
+        div{
+            padding:20px 0;
+            border:1px dashed #ccc;
+        }
+        p{
+            background:#000;
+            color:white;
+            padding:10px;
+        }
+        p:first-of-type{
+            color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vue2 Options</h1>
+    <section>
+        <h2>클릭시 텍스트 변경</h2>
+        <div id="vm1">
+            <p>{{msg1}}</p>
+            <p>{{msg2}}</p>
+            <!-- <button onclick="newMsg1()">버튼</button>
+            <button onclick="newMsg2()">처음으로</button> -->
+            <button v-on:click="newMsg1">버튼</button>
+            <button v-on:click="newMsg2">처음으로</button>
+        </div>
+    </section>
+    <section>
+        <h2>2022-02-15 과제 : 클릭시 텍스트 변경2</h2>
+        <div id="vm2">
+            <p>Good {{msg3}}</p>
+            <!-- <button onclick="newMsg3()">아침</button>
+            <button onclick="newMsg4()">오후</button>
+            <button onclick="newMsg5()">저녁</button> -->
+            <button v-on:click="newMsg3">아침</button>
+            <button v-on:click="newMsg4">오후</button>
+            <button v-on:click="newMsg5">저녁</button>
+        </div>
+    </section>
+    <section>
+        <h2>1증가</h2>
+        <div id="vm3">
+            <p>{{msg4}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>함수 실행</h2>
+        <div id="vm4">
+            <p>{{msg5}}</p>
+            <p>{{msg6()}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>1증감</h2>
+        <div id="vm5">
+            <p>{{msg7}}</p>
+            <button v-on:click="num2">증가</button>
+            <button v-on:click="num3">감소</button>
+        </div>
+    </section>
+    <section>
+        <h2>template 활용</h2>
+        <div id="vm6">
+            <p>{{msg8}}</p>
+        </div>
+    </section>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/v2-options.js"></script>
+</body>
+</html>
