@@ -67,6 +67,51 @@
             <p><a v-bind:href="url2" v-bind:target="newTab">다음</a></p>
         </div>
     </section>
+    <section>
+        <h2>v-bind + v-for</h2>
+        <div id="vm6">
+            <p v-for="link in websites">
+                <a v-bind:href="link.url" v-bind:target="newTab">{{link.name}}</a>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind : inline-style</h2>
+        <div id="vm7">
+            <p style="color:red;">직접 지정</p>
+            <p v-bind:style="cGreen">스타일 v-bind로 지정</p>
+            <p v-bind:style="{color:warning}">스타일 value v-bind로 지정</p>
+            <p v-bind:style="{background:warning, color:light}">여러 스타일 v-bind로 여러 스타일 지정</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind : class</h2>
+        <div id="vm8">
+            <p v-bind:class="classDot">클래스 v-bind로 지정</p>
+            <p v-bind:class="[classDash, classRadius]">다중 클래스 v-bind로 지정</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind : v-on:click</h2>
+        <div id="vm9">
+            <p v-bind:class="cl">안녕하세요</p>
+            <button v-on:click="ck">버튼</button>
+        </div>
+    </section>
+    <section>
+        <h2>v-model : text</h2>
+        <div id="vm10">
+            <input type="text" v-model="userName" placeholder="이름을 입력하세요.">
+            <p>{{userName}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-model : textarea</h2>
+        <div id="vm11">
+            <textarea v-model="userSuggestion" placeholder="건의 내용을 입력하세요."></textarea>
+            <p>{{userSuggestion}}</p>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="js/v2-directive.js"></script>
 </body>
