@@ -53,3 +53,67 @@ const vm5 = new Vue({
         newTab: '_blank'
     }
 });
+
+const vm6 = new Vue({
+    el:'#vm6',
+    data : {
+        newTab: '_blank',
+        websites: [
+            {name:'네이버', url:'http://naver.com'},
+            {name:'다음', url:'http://daum.net'},
+            {name:'구글', url:'http://google.com'},
+            {name:'페이스북', url:'http://facebook.com'}
+        ]
+    }
+});
+
+const vm7 = new Vue({
+    el:'#vm7',
+    data : {
+        cGreen : 'color:green',
+        warning : 'red',
+        light : '#eee'
+    }
+});
+
+const vm8 = new Vue({
+    el:'#vm8',
+    data : {
+        classDot : 'dot',
+        classDash: 'dash',
+        classRadius: 'radius'
+    }
+});
+
+const vm9 = new Vue({
+    el:'#vm9',
+    data : {
+        cl : 'dot',
+        check: true
+    },
+    methods: {
+        ck: function(){
+            if(this.check == true){
+                this.cl = 'dash';
+                this.check = false;
+            }else{
+                this.cl ='dot';
+                this.check = true;
+            }
+        }
+    }
+});
+
+const vm10 = new Vue({
+    el:'#vm10',
+    data: {
+        userName:''
+    }
+});
+
+const vm11 = new Vue({
+    el:'#vm11',
+    data: {
+        userSuggestion:''
+    }
+});
