@@ -8,6 +8,7 @@ div{
 p{
     background:#eee;
     padding:10px;
+    border:1px solid silver;
 }
 
 table{
@@ -28,4 +29,25 @@ th{
 
 tbody tr:nth-child(even){
     background:#eee;
+}
+
+.dot{
+    border-style:dotted;
+}
+
+.dash{
+    border-style:dashed;
+}
+
+.radius{
+    border-radius:10px;
+}
+
+textarea{
+    width:300px;
+    height:100px;
+}
+
+#vm11 p {
+    white-space:pre-line;
 }
