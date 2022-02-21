@@ -164,7 +164,12 @@
                 2. 첫번째 라디오 활성하고 이미지 1개 렌더링
                 3. 각각의 라디오 버튼 선택시 각각의 다른 이미지 렌더링
              -->
-        </div>
+             <p><input type="radio" id="facebook" v-model="imgBg" value="img/facebook_icon.png"><label for="facebook">facebook</label></p>
+             <p><input type="radio" id="google" v-model="imgBg" value="img/google_icon.png"><label for="google">google</label></p>
+             <p><input type="radio" id="instagram" v-model="imgBg" value="img/instagram_icon.png"><label for="instagram">instagram</label></p>
+             <p><input type="radio" id="twitter" v-model="imgBg" value="img/twitter_icon.png"><label for="twitter">twitter</label></p>
+             <img v-bind:src="imgBg">
+            </div>
     </section>
     <section>
         <h2>v-model : select</h2>
