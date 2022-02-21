@@ -149,7 +149,7 @@ const vm15 = new Vue({
 const vm16 = new Vue({
     el:'#vm16',
     data: {
-
+        imgBg: 'img/facebook_icon.png'
     }
 });
 
