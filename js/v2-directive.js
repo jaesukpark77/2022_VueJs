@@ -117,3 +117,45 @@ const vm11 = new Vue({
         userSuggestion:''
     }
 });
+
+const vm12 = new Vue({
+    el:'#vm12',
+    data: {
+        check:true
+    }
+});
+
+const vm13 = new Vue({
+    el:'#vm13',
+    data: {
+        course:[]
+    }
+});
+
+const vm14 = new Vue({
+    el:'#vm14',
+    data: {
+        myAgree:false
+    }
+});
+
+const vm15 = new Vue({
+    el:'#vm15',
+    data: {
+        colorBg:'blue'
+    }
+});
+
+const vm16 = new Vue({
+    el:'#vm16',
+    data: {
+
+    }
+});
+
+const vm17 = new Vue({
+    el:'#vm17',
+    data: {
+        myArea:''
+    }
+});
