@@ -112,6 +112,75 @@
             <p>{{userSuggestion}}</p>
         </div>
     </section>
+    <section>
+        <h2>v-model : checkbox</h2>
+        <div id="vm12">
+            <input type="checkbox" id="check" v-model="check">
+            <label for="check">선택하세요</label>
+            <p>{{check}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-model : checkbox multiple</h2>
+        <div id="vm13">
+            <p><input type="checkbox" id="course1" v-model="course" value="메타버스/제페토 개발과정">
+            <label for="course1">메타버스/제페토 개발과정</label></p>
+            <p><input type="checkbox" id="course2" v-model="course" value="웹디자인/웹개발자 취업과정">
+            <label for="course2">웹디자인/웹개발자 취업과정</label></p>
+            <p><input type="checkbox" id="course3" v-model="course" value="광고편집 취업과정">
+            <label for="course3">광고편집 취업과정</label></p>
+            <p><input type="checkbox" id="course4" v-model="course" value="건축/인테리어 취업과정">
+            <label for="course4">건축/인테리어 취업과정</label></p>
+            <p><input type="checkbox" id="course5" v-model="course" value="모션그래픽/영상 취업과정">
+            <label for="course5">모션그래픽/영상 취업과정</label></p>
+            <p><input type="checkbox" id="course6" v-model="course" value="3D마야/CG 취업과정">
+            <label for="course6">3D마야/CG 취업과정</label></p>
+            <p>{{course}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-model : checkbox + button</h2>
+        <div id="vm14">
+            <input type="checkbox" v-mode="myAgree" id="agreement">
+            <label for="agreement">동의합니다.</label>
+            <button v-bind:disabled="myAgree==false">전송</button>
+        </div>
+    </section>
+    <section>
+        <h2>v-model : radio</h2>
+        <div id="vm15">
+            <p><input type="radio" id="color1" v-model="colorBg" value="red"><label for="color1">빨강</label></p>
+            <p><input type="radio" id="color2" v-model="colorBg" value="green"><label for="color2">초록</label></p>
+            <p><input type="radio" id="color3" v-model="colorBg" value="blue"><label for="color3">파랑</label></p>
+            <p><input type="radio" id="color4" v-model="colorBg" value="orange"><label for="color4">주황</label></p>
+            <p v-bind:style="{background:colorBg}">{{colorBg}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>2022-02-21 과제</h2>
+        <div id="vm16">
+            <!-- 
+                1. 라디오 버튼 4개 마크업
+                2. 첫번째 라디오 활성하고 이미지 1개 렌더링
+                3. 각각의 라디오 버튼 선택시 각각의 다른 이미지 렌더링
+             -->
+        </div>
+    </section>
+    <section>
+        <h2>v-model : select</h2>
+        <div id="vm17">
+            <label for="area">지역</label>
+            <select id="area" v-model="myArea">
+                <option disabled value="">선택하세요.</option>
+                <option>서울</option>
+                <option>인천</option>
+                <option>부산</option>
+                <option>광주</option>
+                <option>제주</option>
+            </select>
+            <p>선택한 지역은 <b>{{myArea}}</b>입니다.</p>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="js/v2-directive.js"></script>
 </body>
