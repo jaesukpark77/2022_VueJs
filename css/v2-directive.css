@@ -52,7 +52,7 @@ textarea{
     white-space:pre-line;
 }
 
-#vm15 p:last-child{
+#vm15 p:last-child, #vm18 p{
     color:#fff;
     text-transform:uppercase;
     font-size:1.5em;
