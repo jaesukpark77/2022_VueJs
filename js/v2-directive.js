@@ -159,3 +159,45 @@ const vm17 = new Vue({
         myArea:''
     }
 });
+
+const vm18 = new Vue({
+    el:'#vm18',
+    data: {
+        myColor:[]
+    }
+});
+
+const vm19 = new Vue({
+    el:'#vm19',
+    data: {
+        userSubject:'',
+        options:[
+            {text:'Web1', value:'HTML+CSS 기초'},
+            {text:'Web2', value:'HTML+CSS 고급'},
+            {text:'Web3', value:'반응형웹'},
+            {text:'Web4', value:'jQuery'},
+            {text:'Web5', value:'ECMAScript 6'}
+        ]
+    }
+});
+
+const vm20 = new Vue({
+    el:'#vm20',
+    data: {
+        myNumber:0
+    }
+});
+
+const vm21 = new Vue({
+    el:'#vm21',
+    data: {
+        myId:''
+    }
+});
+
+const vm22 = new Vue({
+    el:'#vm22',
+    data: {
+        userRivew:''
+    }
+});
