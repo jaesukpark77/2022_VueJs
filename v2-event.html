@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue2 Event</title>
+    <style>
+        div{border:1px dashed #ccc;padding:20px;}
+        p{background:#eee;padding:20px;}
+    </style>
 </head>
 <body>
-    
-
+    <h1>이벤트</h1>
+    <section>
+        <h2>클릭 횟수</h2>
+        <div id="vm1">
+            <button v-on:click="counter1 += 1">클릭</button>
+            <p>클릭한 횟수는 <b>{{counter1}}</b>입니다.</p>
+        </div>
+    </section>
+    <section>
+        <h2>클릭 후 비활성화</h2>
+        <div id="vm2">
+            <button v-bind:disabled="clicked" v-on:click="userClick">클릭</button>
+        </div>
+    </section>
+    <section>
+        <h2>곱하기</h2>
+        <div id="vm3">
+            <button v-on:click="multiply(2)">x2</button>
+            <button v-on:click="multiply(3)">x3</button>
+            <button v-on:click="multiply(5)">x5</button>
+            <button v-on:click="reset">reset</button>
+            <p>값 : {{counter2}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>계산기</h2>
+        <div id="vm4">
+            <p>숫자1 <input type="number" v-model.number="n1"></p>
+            <p>숫자2 :<input type="number" v-model.number="n2"></p>
+            <button v-on:click="nSum">더하기</button>
+            <button v-on:click="nMinus">빼기</button>
+            <button v-on:click="nMultiply">곱하기</button>
+            <button v-on:click="nDivision">나누기</button>
+            <p>값 : {{nResult}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>이름 입력</h2>
+        <div id="vm5">
+            <p>
+                <input type="text" placeholder="이름을 입력하세요." v-model="userName">
+                <button v-on:click="welcoming">확인</button>
+            </p>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="js/v2-event.js"></script>
 </body>
