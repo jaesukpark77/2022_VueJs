@@ -56,6 +56,35 @@
             </p>
         </div>
     </section>
+    <section>
+        <h2>여러개 이벤트 적용</h2>
+        <div id="vm6">
+            <p v-on="{mousedown:doThis, mouseup:doThat}">{{text}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-on:mouseover / v-on:mouseout</h2>
+        <div id="vm7">
+            <p v-on="{mouseover:doOn, mouseout:doLeft}" v-bind:style="{background:doBg, color:doColor}">{{doText}}</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-on:focus / v-on:blur</h2>
+        <div id="vm8">
+            <p>
+                <button v-on="{focus:doFocus, blur:doBlur}">버튼</button>
+                {{doTab}}
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>enter + shift</h2>
+        <div id="vm9">
+            <p>
+                <input type="text" v-on:keydown.enter.shift="enterAlert" placeholder="shift + enter키를 눌러주세요.">
+            </p>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="js/v2-event.js"></script>
 </body>
