@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3 basic</title>
+    <style>
+        div{border:1px solid #ccc;padding:10px;}
+        p{background: #eee;padding:10px}
+        .dot{border-style:dotted;}
+        .round{border-radius:10px;}
+        .red{border-color:red;}
+    </style>
+</head>
+<body>
+    <h1>Vue3 Basic</h1>
+    <section>
+        <h2>Vue3 Basic</h2>
+        <div id="vm1">{{msg1}}</div>
+    </section>
+    <section>
+        <h2>v-html</h2>
+        <div id="vm2">
+            <span v-html="msg2"></span>
+        </div>
+    </section>
+    <section>
+        <h2>v-if</h2>
+        <div id="vm3">
+            <p v-if="num1<5">{{num1}}</p>
+            <p v-else-if="num1<10">대상</p>
+            <p v-else>초과</p>
+            <button @click="plus">증가</button>
+            <button @click="minus">감소</button>
+            {{num1}}
+        </div>
+    </section>
+    <section>
+        <h2>v-bind + v-for</h2>
+        <div id="vm4">
+            <p v-for="person in people">
+                {{person.id}}. {{person.name}} : {{person.age}}
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>v-for</h2>
+        <div id="vm5">
+            <p v-for="link in websites">
+                <a :href="link.url" :target="newTab">{{link.name}}</a>>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind : inline-style</h2>
+        <div id="vm6">
+            <p :style="{background:dark, color:light}">스타일 지정</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind : class</h2>
+        <div id="vm7">
+            <p :class="[classRadius, classDot, classColor]">클래스 지정</p>
+        </div>
+    </section>
+    <section>
+        <h2>v-bind + v-on:click</h2>
+        <div id="vm8">
+            <p :class="myClass">버튼을 클릭하세요.</p>
+            <button @click="ck">버튼</button>
+        </div>
+    </section>
+    <section>
+        <h2>v-model</h2>
+        <div id="vm9">
+            <input type="text" v-model="userName" placeholder="이름을 입력하세요.">
+            <p>{{userName}}</p>
+        </div>
+    </section>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js/v3-basic.js"></script>
+</body>
+</html>
