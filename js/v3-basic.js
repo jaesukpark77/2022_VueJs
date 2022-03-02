@@ -162,7 +162,7 @@ const vm15 = Vue.createApp({
 const vm16 = Vue.createApp({
     data(){
         return{
-            myColor: ''
+            myColor: []
         }
     }
 }).mount('#vm16');
