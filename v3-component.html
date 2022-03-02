@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{border:1px dashed silver;padding:20px;}
+        p{background:#eee;padding:10px}
+        .style1{background:black;color:gold;padding:10px}
+    </style>
+    <title>Vue3 Component</title>
+</head>
+<body>
+    <h1>Vue Component</h1>
+    <section>
+        <h2>전역</h2>
+        <div id="vm1">
+            <global-comp class="style1"></global-comp>
+        </div>
+    </section>
+    <section>
+        <h2>지역</h2>
+        <div id="vm2">
+            <local-comp class="style1"></local-comp>
+        </div>
+    </section>
+    <section>
+        <h2>속성</h2>
+        <div id="vm3">
+            <mycomp1 comp-att="감사합니다."></mycomp1>
+        </div>
+    </section>
+    <section>
+        <h2>속성</h2>
+        <div id="vm4">
+            <call-data></call-data>
+            <counter></counter>
+        </div>
+    </section>
+    <section>
+        <h2>학과별 과목</h2>
+        <div id="vm5">
+            <h3>{{web}}</h3>
+            <h3>{{dtp}}</h3>
+            <h3>{{art}}</h3>
+        </div>
+    </section>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="js/v3-component.js"></script>
+</body>
+</html>
