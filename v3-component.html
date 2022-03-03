@@ -42,8 +42,42 @@
         <h2>학과별 과목</h2>
         <div id="vm5">
             <h3>{{web}}</h3>
+            <web></web>
             <h3>{{dtp}}</h3>
+            <dtp></dtp>
             <h3>{{art}}</h3>
+            <art></art>
+            <!-- 아트웍 과목 4개 이상 추가 -->
+        </div>
+    </section>
+    <section>
+        <h2>v-bind + props</h2>
+        <div id="vm6">
+            <mycomp2 :comp1-num="num1"></mycomp2>
+            <mycomp3 :comp2-num="num2"></mycomp3>
+        </div>
+    </section>
+    <section>
+        <h2>v-for + props</h2>
+        <div id="vm7">
+            <ul>
+                <web-props v-for="ss in webs" :websub="ss"></web-props>
+            </ul>
+            <ul>
+                <dtp-props v-for="ss in dtps" :dtpsub="ss"></dtp-props>
+            </ul>
+            <ul>
+                <art-props v-for="ss in arts" :artsub="ss"></art-props>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>v-model + props</h2>
+        <div id="vm8">
+            <p>{{inputText}}</p>
+            <input type="text" placeholder="텍스트를 입력하세요." v-model="inputText">
+            <hr>
+            <comp-input :comp-input-text="inputText"></comp-input>
         </div>
     </section>
     <script src="https://unpkg.com/vue@3"></script>
