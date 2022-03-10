@@ -1,16 +1,35 @@
-<script setup>
+<template>
+  <todo-header />
+  <todo-input v-on:addTodo="addTodo"/>
+  <todo-list v-bind:propsdata="todoItems"/>
+  <todo-footer />
+</template>
+
+<script>
 import TodoHeader from './components/TodoHeader.vue'
 import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFooter from './components/TodoFooter.vue'
-</script>
 
-<template>
-  <todo-header />
-  <todo-input />
-  <todo-list />
-  <todo-footer />
-</template>
+export default({
+  data(){
+    return{
+      todoItems : []
+    }
+  },
+  metods: {
+    addTodo(){
+
+    }
+  },
+  components: {
+    'TodoHeader': TodoHeader,
+    'TodoInput' : TodoInput,
+    'TodoList' : TodoList,
+    'TodoFooter' : TodoFooter
+  }
+})
+</script>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');

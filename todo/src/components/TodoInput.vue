@@ -1,9 +1,34 @@
 <template>
     <div class="inputBox">
-        <input type="text" placeholder="할 일을 입력하세요">
-        <button class="add">추가</button>
+        <input type="text" placeholder="할 일을 입력하세요" v-model="newTodoItem" @keyup.enter="addTodo">
+        <button class="add" @click="addTodo">추가</button>
     </div>
 </template>
+
+<script>
+export default ({
+    data(){
+        return{
+            newTodoItem:''
+        }
+    },
+    methods: {
+        addTodo(){
+            // console.log(this.newTodoItem);
+            // localStorage.setItem(this.newTodoItem, this.newTodoItem);
+            if(this.newTodoItem !== ''){
+                const value = this.newTodoItem && this.newTodoItem.trim();
+                localStorage.setItem(value, value);
+                this.clearInput();
+            }
+        },
+        clearInput(){
+            this.newTodoItem= '';
+        }
+    }
+})
+</script>
+
 
 <style scoped>
     .inputBox {
