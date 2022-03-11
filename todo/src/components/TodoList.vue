@@ -1,30 +1,17 @@
 <template>
     <div class="section">
         <ul>
-          <li v-for="(todoItem, index) in todoItems" :key="todoItem"><span class="bullet"></span><span class="todo">{{todoItem}}</span><button class="del" @click="removeTodo(todoItem, index)">삭제</button></li>
+          <li v-for="(todoItem, index) in propsdata" :key="todoItem"><span class="bullet"></span><span class="todo">{{todoItem}}</span><button class="del" @click="removeTodo(todoItem, index)">삭제</button></li>
         </ul>
     </div>
 </template>
 
 <script>
 export default ({
-  data () {
-    return{
-      todoItems:[]
-    }
-  },
-  created () {
-    if(localStorage.length > 0){
-      for(let i=0;i<localStorage.length;i++){
-        this.todoItems.push(localStorage.key(i));
-      }
-    }
-  },
+  props:['propsdata'],
   methods: {
     removeTodo(todoItem, index){
-      // console.log(todoItem, index);
-      localStorage.removeItem(todoItem);
-      this.todoItems.splice(index,1);
+      this.$emit('removeTodo', todoItem, index);
     }
   }
 })

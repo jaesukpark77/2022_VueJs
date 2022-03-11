@@ -1,15 +1,17 @@
 <template>
-    <button class="clear" @click="clearTodo">모두 삭제</button>
-    <footer>
-        <div>2022 &copy; My Todo List</div>
-    </footer>
+    <div>
+        <button class="clear" @click="clearTodo">모두 삭제</button>
+        <footer>
+            <div>2022 &copy; My Todo List</div>
+        </footer>
+    </div>
 </template>
 
 <script>
 export default ({
     methods: {
         clearTodo(){
-            localStorage.clear();
+            this.$emit('removeAll');
         }
     }
 })
